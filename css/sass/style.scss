@@ -1,0 +1,132 @@
+@import "main";
+@import "typography";
+//@import "compass";
+@import "compass/css3/";
+@import "animation";
+@import "animation/animate";
+
+/*================================================
+    Website theme: Color glossary                
+=================================================*/
+$bg-color: #000;
+$link-color: #F8FB46;
+$text-color: #fff;
+
+/** Container **/
+body {
+    background: $bg-color;
+    color: $text-color;
+}
+
+.sp-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+
+.bg-imgs {
+    width: 100%;
+    height: 100%;
+
+//    border: 1px solid red;
+//    position: relative;
+    li {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        @include animation(fadeOutLeft 3s ease-in 0s backwards);
+    }
+}
+
+.pic2 {
+    img {
+        @include animation-delay(4s);
+    }
+}
+
+.sp-container {
+    h2 {
+        position: absolute;
+        top: 50%;
+	    line-height: 100px;
+	    height: 100px;
+	    margin: -50px auto 0;
+	    font-size: 80px;
+	    width: 100%;
+	    text-align: center;
+	    color: transparent;
+//        overflow: hidden;
+//        border: 1px solid yellow;
+	    @include animation(blurFadeInOut 3s 7s ease-in backwards);
+    }
+    .frame-2 {
+        @include animation-delay(10s);
+    }
+    .frame-3 {
+        @include animation-delay(13s);
+    }
+    .frame-5 {  
+        @include animation(none);
+        span {
+            display: block;
+            font-size: 50px;
+            line-height: 50px;
+        	@include animation(blurFadeIn 3s ease-in 16s backwards);
+	        color: transparent;
+	        text-shadow: 0px 0px 1px #fff;
+        }
+        span:nth-child(2) {
+            @include animation-delay(18s);
+        }
+    }
+
+	
+}
+
+
+
+@include keyframes(blurFadeInOut) {
+	0%{
+		opacity: 0;
+		text-shadow: 0px 0px 40px #fff;
+		transform: scale(1.3);
+	}
+	20%,75%{
+		opacity: 1;
+		text-shadow: 0px 0px 1px #fff;
+		transform: scale(1);
+	}
+	100%{
+		opacity: 0;
+		text-shadow: 0px 0px 50px #fff;
+		transform: scale(0);
+	}
+}
+
+@include keyframes(blurFadeIn) {
+	0%{
+		opacity: 0;
+		text-shadow: 0px 0px 40px #fff;
+		transform: scale(1.3);
+	}
+	50%{
+		opacity: 0.5;
+		text-shadow: 0px 0px 10px #fff;
+		transform: scale(1.1);
+	}
+	100%{
+		opacity: 1;
+		text-shadow: 0px 0px 1px #fff;
+		transform: scale(1);
+	}
+}
+
+/** Footer **/

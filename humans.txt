@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Rex Hoang -- Developer -- rexy.huuthinhhouse.com -- Singapore (from Hue, Vietnam)
+    
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+    <name> -- <url>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    GIMP
